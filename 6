@@ -1,7 +1,7 @@
 library(recommenderlab) 
 library(ggplot2)
 library(data.table)
-df_data <- fread('C://Users//ckgow//Desktop//data.csv')
+df_data <- fread('data.csv')
 df_data[ ,InvoiceDate := as.Date(InvoiceDate)]
 df_data[Quantity<=0,Quantity:=NA]
 df_data[UnitPrice<=0,UnitPrice:=NA]
